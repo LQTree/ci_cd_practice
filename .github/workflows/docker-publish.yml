@@ -52,4 +52,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ steps.get_owner.outputs.owner }}/ci-cd-practice:latest
+          tags: |
+            ghcr.io/${{ steps.get_owner.outputs.owner }}/ci-cd-practice:latest
+            ghcr.io/${{ steps.get_owner.outputs.owner }}/ci-cd-practice:${{ github.sha }}
